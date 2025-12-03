@@ -1,3 +1,7 @@
+# Video
+
+You can watch the video showcasing the project [here].(https://youtu.be/QhTYQGGlZRo?si=kFcLAP0CoHZq2IXk).
+
 # How to Run the Project
 
 Follow these steps to run this Django project on your machine.
