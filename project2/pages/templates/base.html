@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}Meu Site{% endblock %}
+    </title>
+
+    {% load static %} <!-- necessário para carregar o css -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- efetivamente carregar o css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> <!-- fonte Inter -->
+</head>
+
+<body>
+
+    <!-- barra de navegação / header -->
+    <nav class="navbar">
+
+        <img src="{% static 'img/logo.png' %}" alt="Logo do site"> <!-- logo, imagem da baleia-->
+
+        <!-- links do header -->
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+
+    </nav>
+
+    <!-- bloco onde cada página vai inserir conteúdo -->
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- footer -->
+    <footer>
+        
+        <img src="{% static 'img/logo.png' %}" alt="Logo da empresa"> <!-- logo novamente -->
+
+        <div>
+            <!-- links do footer -->
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </div>
+
+        <!-- botão para o topo -->
+        <a href="#" class="to-top">Return to top</a>
+    </footer>
+
+</body>
+</html>

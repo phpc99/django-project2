@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}Login{% endblock %}
+    </title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/examples_styles.css' %}"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="login-page">
+        <div class="login-card">
+
+            <!-- Lado esquerdo -->
+            <div class="login-info">
+                <h1>INFORMAÇÕES</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. 
+                    Diam volutpat commodo.
+                </p>
+                <p>
+                    <strong>Eu ultrices:</strong> Vitae auctor eu augue ut. Malesuada nunc vel risus 
+                    commodo viverra. Praesent elementum facilisis leo vel.
+                </p>
+
+                <button class="ghost-button">Já tenho uma conta</button>
+            </div>
+
+            <!-- Lado direito -->
+            <div class="login-form">
+
+                <img src="{% static 'img/moorelogo.png' %}" class="form-logo" alt="Logo">
+
+                <h1>LOGIN</h1>
+
+                <form>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seuemail@exemplo.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" placeholder="Digite sua senha">
+                    </div>
+
+                    <button type="submit" class="primary-button">Entrar</button>
+
+                    <a href="#" class="forgot-link">Esqueceu sua senha?</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #86cee0;
+    color: #222;
+    padding: 20px;
+}
+
+/* ---------------- /EXAMPLES/FORM ---------------- */
+
+/* Container geral centralizado */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+/* Card principal (metade azul, metade branco) */
+.login-card {
+    display: flex;
+    align-items: flex-start;
+    max-width: 900px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Lado esquerdo (informações) */
+.login-info {
+    flex: 1;
+    background-color: #469ddc;
+    color: #ffffff;
+    padding: 40px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-info h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.login-info p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.ghost-button {
+    margin-top: 20px;
+    align-self: flex-start;
+    padding: 10px 22px;
+    border-radius: 4px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ghost-button:hover {
+    background: #ffffff;
+    color: #469ddc;
+}
+
+/* Lado direito (formulário) */
+.login-form {
+    position: relative;
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-logo {
+    position: absolute;
+    top: 30px;      /* distância do topo */
+    right: 30px;    /* distância da direita */
+    width: 60px;    /* ajuste o tamanho como quiser */
+    height: auto;
+    opacity: 0.9;   /* opcional: pequeno efeito de opacidade */
+}
+
+.login-form h1 {
+    font-size: 26px;
+    margin-bottom: 32px;
+    color: #222;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #d0d0d0;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #469ddc;
+    box-shadow: 0 0 0 2px rgba(70, 157, 220, 0.2);
+}
+
+.primary-button {
+    margin-top: 8px;
+    width: 100%;
+    padding: 11px 0;
+    border-radius: 4px;
+    border: none;
+    background-color: #469ddc;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.primary-button:hover {
+    background-color: #3684b9;
+}
+
+.forgot-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #469ddc;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* ---------------- /EXAMPLES/QUESTIONNAIRE ---------------- */
+
+.banner {
+    background: #469ddc;
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.banner h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+/* Container */
+
+.container {
+    position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.container-logo {
+    position: absolute;
+    bottom: 30px;     /* distância da borda inferior */
+    right: 30px;      /* distância da borda direita */
+    width: 60px;      /* tamanho */
+    height: auto;
+    opacity: 0.9;     /* para deixar mais suave */
+}
+
+.instruction {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Tabela */
+
+.question-table thead {
+    background: #469ddc;
+    color: white;
+}
+
+.question-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* obrigatório para larguras iguais */
+    margin-bottom: 30px;
+}
+
+.question-table th,
+.question-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+}
+
+.question-table th:first-child,
+.question-table td:first-child {
+    width: 30%;          
+    text-align: left;    
+}
+
+.question-table th:not(:first-child),
+.question-table td:not(:first-child) {
+    width: calc(70% / 5);  
+}
+
+/* Checkbox */
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #469ddc;
+    cursor: pointer;
+}
+
+/* Botão */
+
+.submit-btn {
+    padding: 12px 22px;
+    background: #469ddc;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background: #3684b9;
+}
+
+
+
+
+/* ---------------- /EXAMPLES/GRAPHS ---------------- */
+
+/* Container dos gráficos */
+.charts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+/* Card de cada gráfico (fundo branco) */
+.chart-card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    padding: 20px 24px 28px; /* to top, to left and right, to bottom */
+    max-width: 480px;
+    width: 100%;
+}
+
+.chart-card h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+/* Canvas ajustável */
+.chart-card canvas {
+    width: 100%;
+    max-height: 320px;
+}

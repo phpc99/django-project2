@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero-about">
+    <div class="hero-overlay">
+        <h1>About Our Company</h1>
+        <p>Innovation • Technology • Excellence</p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="about-section">
+
+    <div class="about-text">
+        <h2>Who We Are</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            interdum, ligula quis placerat faucibus, ipsum arcu porta libero,
+            eget laoreet erat nisl vitae dui. Nulla facilisi. Vestibulum non
+            varius dui. Nunc sit amet auctor eros. Duis consectetur neque ac
+            turpis consequat elementum.
+        </p>
+
+        <p>
+            Vivamus aliquet tincidunt nisi. Phasellus vitae ligula id arcu
+            ornare rhoncus ut a tortor. Donec eu velit vel massa blandit
+            faucibus non vel est. Suspendisse tristique eget felis vitae
+            elementum.
+        </p>
+    </div>
+
+    <div class="about-image-small">
+        <img src="{% static 'img/about.png' %}" alt="About small">
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<h1>Contact Us</h1>
+
+<div class="contact-container">
+
+    <div class="contact-card">
+        <img src="{% static 'img/person1.png' %}" alt="Foto 1">
+        <h3>João Silva</h3>
+        <p>joao.silva@example.com</p>
+    </div>
+
+    <div class="contact-card">
+        <img src="{% static 'img/person2.png' %}" alt="Foto 2">
+        <h3>Maria Oliveira</h3>
+        <p>maria.oliveira@example.com</p>
+    </div>
+
+    <div class="contact-card">
+        <img src="{% static 'img/person3.png' %}" alt="Foto 3">
+        <h3>Carlos Mendes</h3>
+        <p>carlos.mendes@example.com</p>
+    </div>
+
+</div>
+
+{% endblock %}

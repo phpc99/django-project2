@@ -1,0 +1,283 @@
+body {
+    margin: 0; /* zero para remover margens do header e do footer */
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* -------------- HEADER -------------- */
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px; /* vertical horizontal */
+}
+
+/* imagem do logo no header */
+.navbar img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+/* texto do header */
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+/* hover com underline */
+.navbar a:hover {
+    color: rgb(50, 121, 175);
+    text-decoration: underline;
+}
+
+/* espaçamento do conteúdo para não ficar colado no header */
+.content {
+    padding: 20px;
+    min-height: 70vh;
+}
+
+
+/* -------------- FOOTER -------------- */
+
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+footer img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+footer a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer a:hover {
+    color: rgb(50, 121, 175);
+    text-decoration: underline;
+}
+
+/* Botão de voltar ao topo */
+.to-top {
+    display: block;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+}
+.to-top:hover {
+    color: rgb(50, 121, 175);
+    text-decoration: underline;
+}
+
+
+/* -------------- CONTACT PAGE -------------- */
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* separação horizontal */
+    gap: 100px;                      /* espaço entre cartões */
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.contact-card {
+    flex: 1;
+    background-color: #60bfd6;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.contact-card img {
+    width: 160px;       
+    height: 160px;
+    border-radius: 50%; /* arredonda */
+    object-fit: cover;  
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    margin: 10px 0 5px;
+}
+
+.contact-card p {
+    color: #333;
+}
+
+
+/* -------------- ABOUT PAGE -------------- */
+
+
+.hero-about {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-image: url("../img/enterprise.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px; /* padrao 12px para ser como a home page */
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay h1 {
+    font-size: 48px;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.hero-overlay p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.85;
+}
+
+/* texto abaixo da hero image */
+.about-section {
+    display: flex;
+    gap: 40px;
+    padding: 40px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.about-image-small img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+
+/* -------------- HOME PAGE -------------- */
+
+
+.home-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+    border-radius: 12px;
+    /* Fundo preto + azul com detalhe de branco */
+    background: radial-gradient(circle at top left, #469ddc 0, #2c2929 45%, #469ddc 100%);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Lado esquerdo: texto */
+.home-left {
+    max-width: 450px;
+    text-align: left;
+}
+
+.home-left h1 {
+    font-size: 42px;
+    margin-bottom: 16px;
+}
+
+.home-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Lado direito: círculos com imagens */
+.home-right {
+    position: relative;
+    width: 50%;
+    min-height: 320px;
+}
+
+/* Estilo base dos círculos */
+.circle {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle img {
+    width: 70%;
+    height: 70%;
+    display: block;
+    margin: auto;   /* centraliza horizontal e vertical */
+    margin-top: 15px;   /* ↓ move para baixo */
+    object-fit: cover;
+}
+
+/* “Espalhando” os círculos aleatoriamente */
+.circle1 {
+    top: 5%;
+    left: 30%;
+}
+.circle2 {
+    top: 40%;
+    left: 5%;
+}
+.circle3 {
+    bottom: 0;
+    left: 30%;
+}
+.circle4 {
+    top: 10%;
+    right: 25%;
+}
+.circle5 {
+    top: 35%;
+    right: 0;
+}
+.circle6 {
+    bottom: 5%;
+    right: 20%;
+}
+
+.circle:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 14px #1e90ff, 0 0 28px #1e90ff;
+    border-color: #1e90ff;
+}
+
+
+
+

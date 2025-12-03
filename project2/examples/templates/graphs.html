@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}Graphs{% endblock %}
+    </title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/examples_styles.css' %}"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <header class="banner">
+        <h1>Painel de Gráficos</h1>
+    </header>
+
+    <!-- Container dos gráficos -->
+    <main class="charts-wrapper">
+
+        <section class="chart-card">
+            <h2>Satisfação geral</h2>
+            <canvas id="pieChart"></canvas>
+        </section>
+
+        <section class="chart-card">
+            <h2>Avaliação por categoria</h2>
+            <canvas id="barChart"></canvas>
+        </section>
+
+    </main>
+
+    <script>
+        // Fake data para o gráfico tipo pie
+        const pieCtx = document.getElementById('pieChart');
+
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Muito satisfeito', 'Satisfeito', 'Neutro', 'Insatisfeito', 'Muito insatisfeito'],
+                datasets: [{
+                    data: [35, 40, 15, 7, 3],
+                    backgroundColor: [
+                        '#469ddc',  // azul principal
+                        '#6fd4e5',  // azul claro
+                        '#ffb347',  // laranja suave
+                        '#ff6384',  // rosa
+                        '#4cbb17'   // verde-água
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Fake data para o gráfico tipo bar
+        const barCtx = document.getElementById('barChart');
+
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Atendimento', 'Qualidade', 'Preço', 'Entrega', 'Suporte'],
+                datasets: [{
+                    label: 'Nota média',
+                    data: [4.5, 4.2, 3.8, 4.0, 4.6],
+                    backgroundColor: [
+                        '#469ddc',
+                        '#6fd4e5',
+                        '#ffb347',
+                        '#ff6384',
+                        '#4cbb17'
+                    ],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // adicionado para centralizar verticalmente o grafico de barras
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 7,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
